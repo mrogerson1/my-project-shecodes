@@ -22,13 +22,13 @@ function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Sunday ",
+    "Monday ",
+    "Tuesday ",
+    "Wednesday ",
+    "Thursday ",
+    "Friday ",
+    "Saturday ",
   ];
   let day = days[date.getDay()];
 
@@ -41,7 +41,7 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "88ce19e7ct3e14a9169c6ob09cfa1a38";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(updateWeatherData);
 }
 
